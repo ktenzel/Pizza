@@ -9,7 +9,7 @@
     <title>Pizza Order</title>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -40,11 +40,13 @@
       </div>
     </nav>
     <div class="container">
+      <div class="col-md-6">
+
       <h1>Pizza</h1>
       <h3>Starting at $8</h3>
       <form id="pizzaform">
         <div class="crust">
-        <h2>Crust</h2>
+        <h2 class="selectbutton">Crust</h2>
         <label for="crust">Crust Type</label>
           <select id="crust">
             <option value="Thin">Thin</option>
@@ -54,7 +56,7 @@
           </select>
         </div>
         <div class="size">
-        <h2>Size</h2>
+        <h2 class="selectbutton">Size</h2>
           <label for="size">Choose Size</label>
             <select id="size">
               <option value="Small">Small</option>
@@ -62,7 +64,8 @@
               <option value="Large">Large +4</option>
           </select>
         </div>
-          <h2>Toppings</h2>
+        <div class="toppings">
+          <h2 class="selectbutton">Toppings</h2>
           <p>Add .50 each</p>
           <input type="checkbox" name="toppings" value="Olives">Olives<br>
           <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
@@ -72,14 +75,15 @@
           <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
           <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
           <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
-          <button type="submit" class="btn btn-primary">Total</button>
+        </div>
+        <button type="submit" class="btn btn-primary">Total</button>
       </form>
-      <div id="orderBoard">
+    </div>
 
+      <div class="col-md-6" id="orderBoard">
           <h2>Order:</h2>
           <ul id="ticket">
           </ul>
-        </div>
         <div class="col-md-6">
           <div id="show-order">
             <h2>Your Ticket</h2>
@@ -88,8 +92,9 @@
             <p>Toppings: <span class="toppingschoice"></span></p>
             <p>Price: $<strong><span class="price"></span></strong></p>
           </div>
-          </div>
         </div>
+      </div>
+    </div>
 
       </div>
     </div>
