@@ -16,8 +16,6 @@ Pizza.prototype.finalprice = function() {
     var pizzaPrice = pizzaprice += 1;
   } if (this.crust === "Garlic") {
     var pizzaPrice = pizzaprice += 1;
-  } if (this. === "large") {
-    var pizzaPrice = pizzaprice += 4;
   } else {
     console.log("keep working");
   }
@@ -36,6 +34,14 @@ $(document).ready(function() {
     var newPizza = new Pizza(inputtedCrust, inputtedSize);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
+
+    $("form.toppingsform").submit(function(event) {
+      event.preventDefault();
+      $("input:checkbox[name=toppings]:checked").each(function(){
+        var toppings = $(this).val();
+        $('#toppings').append(toppings + " ")
+      })
+
 
     $(".movieticket").last().click(function() {
       $("#show-ticket").fadeIn();

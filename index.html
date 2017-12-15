@@ -33,17 +33,20 @@
                 </select>
                 <div>
                   <h2>Toppings</h2>
-                  <input type="checkbox" name="toppings" value="Extra Cheese">Extra Cheese<br>
-                  <input type="checkbox" name="toppings" value="Olives">Olives<br>
-                  <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
-                  <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
-                  <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
-                  <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
-                  <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
-                  <input type="checkbox" name="toppings" value="Basil">Basil<br>
+                  <form class="toppingsform" action="index.html" method="post">
+                    <input type="checkbox" name="toppings" value="Extra Cheese">Extra Cheese<br>
+                    <input type="checkbox" name="toppings" value="Olives">Olives<br>
+                    <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+                    <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
+                    <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
+                    <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
+                    <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
+                    <input type="checkbox" name="toppings" value="Basil">Basil<br>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">Create Pizza</button>
           </form>
 
           <h2>Contacts:</h2>
@@ -56,7 +59,7 @@
           <div id="show-ticket">
             <h2>Your Ticket</h2>
             <p>Movie chosen: <span class="moviechoice"></span></p>
-            <p>Time: <span class="timechoice"></span></p>
+            <p>Toppings: <span id="toppings"></span></p>
             <p>Age group: <span class="agegroup"></span></p>
             <p>Price: $<strong><span class="price"></span>0</strong></p>
           </div>
