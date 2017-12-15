@@ -10,53 +10,39 @@
   <body>
     <div class="container">
       <h1>Pizza</h1>
-
+        <label for="crust">Crust Type</label>
+          <select id="crust">
+            <option value="Thin">Thin</option>
+            <option value="Thick">Thick</option>
+            <option value="Deep Dish">Deep Dish</option>
+            <option value="Garlic">Garlic</option>
+          </select>
       <div class="row">
 
         <div class="col-md-6">
           <form id="pizzaform">
-            <div class="form-group">
-              <h2>Pizza</h2>
-              <label for="crust">Crust Type</label>
-                <select id="crust">
-                  <option value="Thin">Thin</option>
-                  <option value="Thick">Thick</option>
-                  <option value="Deep Dish">Deep Dish</option>
-                  <option value="Garlic">Garlic</option>
-                </select>
                 <h2>Size</h2>
                 <label for="size">Choose Size</label>
                 <select id="size">
-                  <option value="small">Small</option>
-                  <option value="medium">Medium</option>
-                  <option value="large">Large</option>
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
                 </select>
-                <div id="toppingsfield">
-                  <h2>Toppings</h2>
-                    <input type="checkbox" name="toppings" value="Extra Cheese">Extra Cheese<br>
-                    <input type="checkbox" name="toppings" value="Olives">Olives<br>
-                    <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
-                    <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
-                    <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
-                    <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
-                    <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
-                    <input type="checkbox" name="toppings" value="Basil">Basil<br>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Create Pizza</button>
+
+            <button type="submit" class="btn btn-primary">Add</button>
           </form>
 
-          <h2>Order:</h2>
+          <h2>Contacts:</h2>
           <ul id="ticket">
 
           </ul>
         </div>
 
         <div class="col-md-6">
-          <div id="show-pizza">
-            <h2>Your Pizza</h2>
-            <p>Movie chosen: <span class="moviechoice"></span></p>
-            <p>Toppings: <span id="toppings"></span></p>
+          <div id="show-ticket">
+            <h2>Your Ticket</h2>
+            <p>Crust chosen: <span class="sizechoice"></span></p>
+            <p>Time: <span class="timechoice"></span></p>
             <p>Age group: <span class="agegroup"></span></p>
             <p>Price: $<strong><span class="price"></span>0</strong></p>
           </div>

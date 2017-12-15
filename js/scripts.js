@@ -1,16 +1,15 @@
 //business logic
 var pizzaprice = 8;
-function Pizza(crust, size, age, price) {
-  this.crust = crust;
+function Pizza(size) {
   this.size = size;
-  this.price = price;
 }
+
 Pizza.prototype.finalprice = function() {
-  if (this.size === "small") {
+  if (this.size === "Small") {
     var pizzaPrice = pizzaprice;
-  } if (this.size === "medium") {
+  } if (this.size === "Medium") {
     var pizzaPrice = pizzaprice += 2;
-  } if (this.size === "large") {
+  } if (this.size === "Large") {
     var pizzaPrice = pizzaprice += 4;
   } if (this.crust === "Deep Dish") {
     var pizzaPrice = pizzaprice += 1;
@@ -23,34 +22,19 @@ Pizza.prototype.finalprice = function() {
 }
 // user interface logic
 $(document).ready(function() {
-
-
   $("form#pizzaform").submit(function(event) {
     event.preventDefault();
-
-    var inputtedCrust = $("#crust").val();
+debugger;
     var inputtedSize = $("#size").val();
-    var inputtedAge = $("input:radio[name=age]:checked").val();
-    var newPizza = new Pizza(inputtedCrust, inputtedSize);
+    var newPizza = new Pizza(inputtedSize);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
 
-      event.preventDefault();
-      $("input:checkbox[name=toppings]:checked").each(function(){
-        var toppings = $(this).val();
-        $('#toppings').append(toppings + " ")
-
-
     $(".movieticket").last().click(function() {
-      $("#show-pizza").fadeIn();
-      $("#show-ticket h2").text(newTicket.movie);
-      $(".moviechoice").text(newTicket.movie);
-      $(".timechoice").text(newTicket.time);
+      $("#show-ticket").fadeIn();
+      $(".sizechoice").text(newPizza.size);
       $(".price").text(finalPrice);
 
-        // $("#addresses").click(function(){
-        //   $("li").remove();
-        // });
-      });
     });
   });
+});
