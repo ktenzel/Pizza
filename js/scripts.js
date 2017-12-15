@@ -41,14 +41,16 @@ debugger;
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
     $("#orderBoard").slideDown().show();
 
-    $(".movieticket").last().click(function() {
+    // $(".movieticket").last().click(function() {
 
-      $("#show-order").fadeIn().show();
+      $(".show-order").fadeIn().show();
       $(".sizechoice").text(newPizza.size);
       $(".crustchoice").text(newPizza.crust);
       $(".toppingschoice").text(toppingArray);
       $(".price").text(finalPrice);
 
-    });
+    // });
+    $("#size").val("");
+    $("#crust").val("");
   });
 });

@@ -21,6 +21,9 @@ select {
   color: black;
 }
 
+img {
+  border-radius: 50%;
+}
 #orderBoard {
   float: right;
   display: none;
@@ -28,5 +31,5 @@ select {
 }
 
 .show-order {
-  display: none;
+  /*display: none;*/
 }
