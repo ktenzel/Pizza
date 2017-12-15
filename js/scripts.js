@@ -1,5 +1,6 @@
 //business logic
 var pizzaprice = 8;
+var toppingArray = [];
 function Pizza(size, crust) {
   this.size = size;
   this.crust = crust;
@@ -28,6 +29,9 @@ $(document).ready(function() {
 debugger;
     var inputtedSize = $("#size").val();
     var inputtedCrust = $("#crust").val();
+    $("input:checkbox[name=work-transportation]:checked").each(function(){
+      var workTransportationMode = $(this).val();
+      array.push(workTransportationMode + " ");
     var newPizza = new Pizza(inputtedSize, inputtedCrust);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
@@ -36,6 +40,7 @@ debugger;
       $("#show-ticket").fadeIn();
       $(".sizechoice").text(newPizza.size);
       $(".crustchoice").text(newPizza.crust);
+      $(".toppingschoice").text(newPizza.crust);
       $(".price").text(finalPrice);
 
     });

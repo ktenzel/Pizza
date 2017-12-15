@@ -10,6 +10,7 @@
   <body>
     <div class="container">
       <h1>Pizza</h1>
+      <form id="pizzaform">
         <label for="crust">Crust Type</label>
           <select id="crust">
             <option value="Thin">Thin</option>
@@ -17,10 +18,26 @@
             <option value="Deep Dish">Deep Dish</option>
             <option value="Garlic">Garlic</option>
           </select>
+          <h2>Size</h2>
+          <label for="size">Choose Size</label>
+          <select id="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
       <div class="row">
-
+        <div class="form-group">
+          <h2>Toppings</h2>
+          <input type="checkbox" name="toppings" value="Olives">Olives<br>
+          <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
+          <input type="checkbox" name="toppings" value="Onions">Onions<br>
+          <input type="checkbox" name="toppings" value="Bacon">Bacon<br>
+          <input type="checkbox" name="toppings" value="Extra cheese">Extra cheese<br>
+          <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+          <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
+          <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
+        </div>
         <div class="col-md-6">
-          <form id="pizzaform">
                 <h2>Size</h2>
                 <label for="size">Choose Size</label>
                 <select id="size">
@@ -43,7 +60,7 @@
             <h2>Your Ticket</h2>
             <p>Size: <span class="sizechoice"></span></p>
             <p>Crust: <span class="crustchoice"></span></p>
-            <p>Age group: <span class="agegroup"></span></p>
+            <p>Toppings: <span class="toppingschoice"></span></p>
             <p>Price: $<strong><span class="price"></span></strong></p>
           </div>
         </div>
