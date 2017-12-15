@@ -24,6 +24,7 @@ select {
 #orderBoard {
   float: right;
   display: none;
+  background: linear-gradient(#67E7E1, #BFAFDD);
 }
 
 .show-order {

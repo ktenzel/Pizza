@@ -27,7 +27,7 @@ Pizza.prototype.finalprice = function() {
 
 // user interface logic
 $(document).ready(function() {
-  $("form#pizzaform").submit(function(event) {
+  $("form#pizzaform").last().submit(function(event) {
     event.preventDefault();
 debugger;
     var inputtedSize = $("#size").val();
@@ -39,14 +39,14 @@ debugger;
     var newPizza = new Pizza(inputtedSize, inputtedCrust);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
-    $("#orderBoard").fadeIn().show();
+    $("#orderBoard").slideDown().show();
 
     $(".movieticket").last().click(function() {
 
       $("#show-order").fadeIn().show();
       $(".sizechoice").text(newPizza.size);
       $(".crustchoice").text(newPizza.crust);
-      $(".toppingschoice").append(toppingArray);
+      $(".toppingschoice").text(toppingArray);
       $(".price").text(finalPrice);
 
     });
