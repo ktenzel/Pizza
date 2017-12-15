@@ -39,9 +39,11 @@ debugger;
     var newPizza = new Pizza(inputtedSize, inputtedCrust);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
+    $("#orderBoard").fadeIn().show();
 
     $(".movieticket").last().click(function() {
-      $("#show-order").fadeIn();
+
+      $("#show-order").fadeIn().show();
       $(".sizechoice").text(newPizza.size);
       $(".crustchoice").text(newPizza.crust);
       $(".toppingschoice").append(toppingArray);

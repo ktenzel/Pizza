@@ -1,9 +1,14 @@
 .crust, .size, .toppings {
-  background-color: #92D075;
+  background-color: #BFAFDD;
 }
 
+.selectbutton {
+  background: linear-gradient(#67E7E1, #BFAFDD);
+  padding: 5px;
+  width: auto;
+}
 body {
-  background: linear-gradient(#67E7E1, #92D075);
+  background: linear-gradient(#67E7E1, #BFAFDD);
   background-size: 100%;
   color: white;
   height: 1500px;
@@ -18,10 +23,9 @@ select {
 
 #orderBoard {
   float: right;
+  display: none;
 }
 
-.selectbutton {
-  background-color: #DD9B44;
-  padding: 5px;
-  width: auto;
+.show-order {
+  display: none;
 }
