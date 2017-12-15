@@ -1,0 +1,19 @@
+.crust .size {
+  background-color: #92D075;
+}
+
+body {
+  background: linear-gradient(#101010, #92D075);
+  background-size: 100%;
+  color: white;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+select {
+  color: black;
+}
+
+/*#orderBoard {
+  display: none;
+}*/

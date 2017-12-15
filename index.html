@@ -4,30 +4,66 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pizza Order</title>
   </head>
   <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Kyle's Pizza</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Score: <span id="playerOneScore"></span></a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#"> Turns: <span id="playerOneTurns"></a></span>
+
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <h1>Pizza</h1>
+      <h3>Starting at $8</h3>
       <form id="pizzaform">
+        <div class="crust">
+        <h2>Crust</h2>
         <label for="crust">Crust Type</label>
           <select id="crust">
             <option value="Thin">Thin</option>
             <option value="Thick">Thick</option>
-            <option value="Deep Dish">Deep Dish</option>
-            <option value="Garlic">Garlic</option>
+            <option value="Deep Dish">Deep Dish +1</option>
+            <option value="Garlic">Garlic +1</option>
           </select>
-          <h2>Size</h2>
+        </div>
+        <div class="size">
+        <h2>Size</h2>
           <label for="size">Choose Size</label>
-          <select id="size">
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
+            <select id="size">
+              <option value="Small">Small</option>
+              <option value="Medium">Medium +2</option>
+              <option value="Large">Large +4</option>
           </select>
-        <div class="row">
-        <div class="form-group">
+        </div>
           <h2>Toppings</h2>
+          <p>Add .50 each</p>
           <input type="checkbox" name="toppings" value="Olives">Olives<br>
           <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
           <input type="checkbox" name="toppings" value="Onions">Onions<br>
@@ -36,16 +72,14 @@
           <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
           <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
           <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
-        </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+          <button type="submit" class="btn btn-primary">Total</button>
       </form>
+      <div id="orderBoard">
 
           <h2>Order:</h2>
           <ul id="ticket">
-
           </ul>
         </div>
-
         <div class="col-md-6">
           <div id="show-order">
             <h2>Your Ticket</h2>
@@ -53,6 +87,7 @@
             <p>Crust: <span class="crustchoice"></span></p>
             <p>Toppings: <span class="toppingschoice"></span></p>
             <p>Price: $<strong><span class="price"></span></strong></p>
+          </div>
           </div>
         </div>
 

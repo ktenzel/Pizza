@@ -1,14 +1,10 @@
 //business logic
 var pizzaprice = 8;
 var toppingArray = [];
-var totalTop;
 function Pizza(size, crust) {
   this.size = size;
   this.crust = crust;
 }
- function totalToppings(toppingArray) {
-   var totalTop = toppingArray.length * 0.5;
- }
 
 Pizza.prototype.finalprice = function() {
   if (this.size === "Small") {
@@ -21,15 +17,14 @@ Pizza.prototype.finalprice = function() {
     var pizzaPrice = pizzaprice += 1;
   } if (this.crust === "Garlic") {
     var pizzaPrice = pizzaprice += 1;
+  } if (toppingArray.length > 0) {
+    var pizzaPrice = pizzaprice + (toppingArray.length * .5);
   } else {
     console.log("keep working");
   }
   return pizzaPrice;
 }
 
-function totalPrice(totalTop, pizzaPrice) {
-  pizzaPrice = totalTop + pizzaPrice;
-}
 // user interface logic
 $(document).ready(function() {
   $("form#pizzaform").submit(function(event) {
