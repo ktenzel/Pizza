@@ -1,10 +1,14 @@
 //business logic
 var pizzaprice = 8;
 var toppingArray = [];
+var totalTop;
 function Pizza(size, crust) {
   this.size = size;
   this.crust = crust;
 }
+ function totalToppings(toppingArray) {
+   var totalTop = toppingArray.length * 0.5;
+ }
 
 Pizza.prototype.finalprice = function() {
   if (this.size === "Small") {
@@ -22,6 +26,10 @@ Pizza.prototype.finalprice = function() {
   }
   return pizzaPrice;
 }
+
+function totalPrice(totalTop, pizzaPrice) {
+  pizzaPrice = totalTop + pizzaPrice;
+}
 // user interface logic
 $(document).ready(function() {
   $("form#pizzaform").submit(function(event) {
@@ -29,18 +37,19 @@ $(document).ready(function() {
 debugger;
     var inputtedSize = $("#size").val();
     var inputtedCrust = $("#crust").val();
-    $("input:checkbox[name=work-transportation]:checked").each(function(){
-      var workTransportationMode = $(this).val();
-      array.push(workTransportationMode + " ");
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      var toppings = $(this).val();
+      toppingArray.push(toppings + " ");
+    });
     var newPizza = new Pizza(inputtedSize, inputtedCrust);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
 
     $(".movieticket").last().click(function() {
-      $("#show-ticket").fadeIn();
+      $("#show-order").fadeIn();
       $(".sizechoice").text(newPizza.size);
       $(".crustchoice").text(newPizza.crust);
-      $(".toppingschoice").text(newPizza.crust);
+      $(".toppingschoice").append(toppingArray);
       $(".price").text(finalPrice);
 
     });
