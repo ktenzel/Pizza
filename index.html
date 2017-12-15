@@ -5,38 +5,42 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Movies Tickets</title>
+    <title>Pizza Order</title>
   </head>
   <body>
     <div class="container">
-      <h1>Movies</h1>
+      <h1>Pizza</h1>
 
       <div class="row">
 
         <div class="col-md-6">
-          <form id="movieform">
+          <form id="pizzaform">
             <div class="form-group">
-              <h2>Movie</h2>
-              <label for="movies">Choose a movie</label>
-                <select id="movies">
-                  <option value="Action">Action</option>
-                  <option value="Drama">Drama</option>
-                  <option value="Comedy">Comedy</option>
-                  <option value="Musical">Musical</option>
-                  <option value="Documentary">Documentary</option>
+              <h2>Pizza</h2>
+              <label for="crust">Crust Type</label>
+                <select id="crust">
+                  <option value="Thin">Thin</option>
+                  <option value="Thick">Thick</option>
+                  <option value="Deep Dish">Deep Dish</option>
+                  <option value="Garlic">Garlic</option>
                 </select>
-                <h2>Time</h2>
-                <label for="times">Choose a viewing time</label>
-                <select id="times">
-                  <option value="12:00">12:00</option>
-                  <option value="2:00">2:00</option>
+                <h2>Size</h2>
+                <label for="size">Choose Size</label>
+                <select id="size">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
                 </select>
                 <div>
-                  <h2>Age</h2>
-                  <p><strong>Choose your age range</strong></p>
-                  <input type="radio" name="age" value="youth"> 0 - 14<br>
-                  <input type="radio" name="age" value="middle"> 15 - 54<br>
-                  <input type="radio" name="age" value="senior"> 55+<br>
+                  <h2>Toppings</h2>
+                  <input type="checkbox" name="toppings" value="Extra Cheese">Extra Cheese<br>
+                  <input type="checkbox" name="toppings" value="Olives">Olives<br>
+                  <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+                  <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
+                  <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
+                  <input type="checkbox" name="toppings" value="Green peppers">Green peppers<br>
+                  <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
+                  <input type="checkbox" name="toppings" value="Basil">Basil<br>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Add</button>
