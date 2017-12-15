@@ -35,16 +35,14 @@ $(document).ready(function() {
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
 
-    $("form.toppingsform").submit(function(event) {
       event.preventDefault();
       $("input:checkbox[name=toppings]:checked").each(function(){
         var toppings = $(this).val();
         $('#toppings').append(toppings + " ")
-      })
 
 
     $(".movieticket").last().click(function() {
-      $("#show-ticket").fadeIn();
+      $("#show-pizza").fadeIn();
       $("#show-ticket h2").text(newTicket.movie);
       $(".moviechoice").text(newTicket.movie);
       $(".timechoice").text(newTicket.time);
