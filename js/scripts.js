@@ -1,7 +1,8 @@
 //business logic
 var pizzaprice = 8;
-function Pizza(size) {
+function Pizza(size, crust) {
   this.size = size;
+  this.crust = crust;
 }
 
 Pizza.prototype.finalprice = function() {
@@ -26,13 +27,15 @@ $(document).ready(function() {
     event.preventDefault();
 debugger;
     var inputtedSize = $("#size").val();
-    var newPizza = new Pizza(inputtedSize);
+    var inputtedCrust = $("#crust").val();
+    var newPizza = new Pizza(inputtedSize, inputtedCrust);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
 
     $(".movieticket").last().click(function() {
       $("#show-ticket").fadeIn();
       $(".sizechoice").text(newPizza.size);
+      $(".crustchoice").text(newPizza.crust);
       $(".price").text(finalPrice);
 
     });
