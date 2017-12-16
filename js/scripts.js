@@ -5,6 +5,11 @@ function Pizza(size, crust) {
   this.size = size;
   this.crust = crust;
 }
+function Address(street, city, zip) {
+  this.street = street;
+  this.city = city;
+  this.zip = zip;
+}
 
 Pizza.prototype.finalprice = function() {
   if (this.size === "Small") {
@@ -52,7 +57,9 @@ debugger;
       $(".crustchoice").text(newPizza.crust);
       $(".toppingschoice").text(toppingArray);
       $(".price").text(finalPrice);
-
+      $(".addressoutput").text(newAddress.street);
+      $(".cityoutput").text(newAddress.city);
+      $(".zipoutput").text(newAddress.zip);
     // });
     $("#size").val("");
     $("#crust").val("");
