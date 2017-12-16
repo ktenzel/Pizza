@@ -1,4 +1,4 @@
-.crust, .size, .toppings {
+.crust, .size, .toppings, .address, .form-group, .form-row{
   background-color: #BFAFDD;
 }
 
@@ -30,6 +30,12 @@ img {
   background: linear-gradient(#67E7E1, #BFAFDD);
 }
 
+#inputAddress {
+  width: 95%;
+}
+#delivery {
+  margin-bottom: 0px;
+}
 .show-order {
   /*display: none;*/
 }

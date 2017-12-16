@@ -32,10 +32,14 @@ $(document).ready(function() {
 debugger;
     var inputtedSize = $("#size").val();
     var inputtedCrust = $("#crust").val();
+    var inputtedAddress = $("#inputAddress").val();
+    var inputtedCity = $("#inputCity").val();
+    var inputtedZip = $("#inputZip").val();
     $("input:checkbox[name=toppings]:checked").each(function() {
       var toppings = $(this).val();
       toppingArray.push(toppings + " ");
     });
+    var newAddress = new Address(inputtedAddress, inputtedCity, inputtedZip)
     var newPizza = new Pizza(inputtedSize, inputtedCrust);
     var finalPrice = newPizza.finalprice();
     $("ul#ticket").append("<li><span class='movieticket'>" + newPizza.size + "</span></li>");
